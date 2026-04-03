@@ -42,7 +42,7 @@ class Shape(ABC):
 
         pass
 
-# Rectangle subclass
+
 class Rectangle(Shape):
 
     def __init__(self, length=5, breadth=3):
@@ -57,7 +57,7 @@ class Rectangle(Shape):
         
         print("Rectangle Area:", area)
 
-# Circle subclass
+
 class Circle(Shape):
 
     def __init__(self, radius=4):
@@ -70,12 +70,12 @@ class Circle(Shape):
         
         print("Circle Area:", round(area, 2))
 
-# Create objects
+
 rect = Rectangle()
 
 circ = Circle()
 
-# Call methods
+
 rect.calculate_area()
 
 circ.calculate_area()
