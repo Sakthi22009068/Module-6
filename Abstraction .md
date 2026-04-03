@@ -29,7 +29,62 @@ To create an **abstract class** named `Shape` with an **abstract method** `calcu
 ---
 
 ## 💻 Program
+from abc import ABC, abstractmethod
+
+import math
+
+# Abstract class
+class Shape(ABC):
+
+    @abstractmethod
+    
+    def calculate_area(self):
+
+        pass
+
+# Rectangle subclass
+class Rectangle(Shape):
+
+    def __init__(self, length=5, breadth=3):
+    
+        self.length = length
+        
+        self.breadth = breadth
+
+    def calculate_area(self):
+    
+        area = self.length * self.breadth
+        
+        print("Rectangle Area:", area)
+
+# Circle subclass
+class Circle(Shape):
+
+    def __init__(self, radius=4):
+    
+        self.radius = radius
+
+    def calculate_area(self):
+    
+        area = math.pi * self.radius ** 2
+        
+        print("Circle Area:", round(area, 2))
+
+# Create objects
+rect = Rectangle()
+
+circ = Circle()
+
+# Call methods
+rect.calculate_area()
+
+circ.calculate_area()
 
 ## Output
+Rectangle Area: 15
+   
+Circle Area: 50.27
 
 ## Result
+
+The Python program successfully demonstrated the use of abstract classes and methods, where the abstract class Shape defines a template, and the subclasses Rectangle and Circle implement the calculate_area method.
