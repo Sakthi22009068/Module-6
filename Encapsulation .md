@@ -23,7 +23,31 @@ To implement **Encapsulation** in Python by defining a class `Rectangle` with **
 ---
 
 ## 💻 Program
+class Rectangle:
+
+    def __init__(self, length=5, breadth=3):
+    
+        self.__length = length
+        
+        self.__breadth = breadth
+        
+        print("Rectangle Created with Length =", self.__length, "and Breadth =", self.__breadth)
+        
+    # Method to get area (accessing private members)
+    def area(self):
+    
+        return self.__length * self.__breadth
+
+
+rect = Rectangle()
+
+
+print("Area of Rectangle:", rect.area())
 
 ## Output
+Rectangle Created with Length = 5 and Breadth = 3
+
+Area of Rectangle: 15
 
 ## Result
+The Python program successfully demonstrated Encapsulation, where the private members __length and __breadth are accessed only through methods within the class, preventing direct external access.
